@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'com.novoda.bintray-release'//添加
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+//添加
+publish {
+    userOrg = 'developmc'//bintray.com用户名
+    groupId = 'com.clement'//jcenter上的路径
+    artifactId = 'clementTool'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
+    website = 'https://github.com/hyman/basetools'//网站，不重要
+}
